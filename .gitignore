@@ -112,3 +112,7 @@ Output folder/
 *.avi
 *.mov
 *.mkv
+
+# Git instructions file
+git.txt
+git.txt
