@@ -69,10 +69,16 @@ sudo apt-get install ffmpeg libgl1 libglib2.0-0
 #### Step 4: Install Python Dependencies
 ```bash
 pip install -r requirements.txt
+pip install gradio
 ```
 
 #### Step 5: Download the Face Swap Model
-The `inswapper_128.onnx` model file (529MB) should already be included in the repository. If not, you can download it from the InsightFace model zoo.
+```bash
+pip install -U insightface
+pip install onnxruntime
+```
+
+The `inswapper_128.onnx` model file (529MB) should already be included in the repository. If not, you can download it from the pip install -U insightface.
 
 #### Step 6: Run the Application
 ```bash
