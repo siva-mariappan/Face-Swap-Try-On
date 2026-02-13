@@ -1,0 +1,175 @@
+================================
+TECHNICAL STACK
+================================
+
+Project: Face-Swap-Try-On
+Type: Deep Learning Web Application
+License: MIT
+
+================================
+CORE TECHNOLOGIES
+================================
+
+1. PROGRAMMING LANGUAGE
+   - Python 3.11+
+   - Object-oriented and functional programming paradigms
+
+2. WEB FRAMEWORK
+   - Gradio 4.44.1
+   - Purpose: Interactive web interface for AI models
+   - Features: Real-time image/video upload, processing, and display
+
+================================
+DEEP LEARNING & AI
+================================
+
+3. FACE ANALYSIS & RECOGNITION
+   - InsightFace 0.7.3
+   - Purpose: Face detection, analysis, and feature extraction
+   - Models Used:
+     * buffalo_l - Face detection suite
+     * det_10g.onnx - Face detection (10G parameters)
+     * w600k_r50.onnx - Face recognition (ResNet-50 backbone)
+     * 1k3d68.onnx - 3D facial landmark detection (68 points)
+     * 2d106det.onnx - 2D facial landmark detection (106 points)
+     * genderage.onnx - Gender and age estimation
+
+4. FACE SWAPPING MODEL
+   - InSwapper (inswapper_128.onnx)
+   - Model Size: 529MB
+   - Architecture: Generative deep learning model
+   - Purpose: High-quality face swapping
+
+5. INFERENCE ENGINE
+   - ONNX Runtime 1.18.0
+   - Purpose: Optimized model inference
+   - Format: ONNX (Open Neural Network Exchange)
+   - Execution: CPU-based inference
+
+6. ONNX FRAMEWORK
+   - ONNX 1.16.0
+   - Purpose: Cross-platform model format
+   - Compatibility: Portable across different frameworks
+
+================================
+COMPUTER VISION & IMAGE PROCESSING
+================================
+
+7. OPENCV
+   - opencv-python-headless 4.9.0.80
+   - Purpose: Image and video processing
+   - Features:
+     * Image reading/writing
+     * Color space conversions (RGB ↔ BGR)
+     * Video frame extraction
+     * Video encoding/decoding
+
+8. IMAGE PROCESSING
+   - Pillow 10.3.0
+   - Purpose: Image handling and format conversion
+   - Formats: PNG, JPG, JPEG, BMP, WEBP
+
+================================
+NUMERICAL COMPUTING
+================================
+
+9. NUMPY
+   - Version: 1.26.4
+   - Purpose: Array operations and numerical computations
+   - Usage: Image array manipulation, matrix operations
+
+================================
+VIDEO PROCESSING
+================================
+
+10. FFMPEG
+    - Purpose: Video encoding and audio preservation
+    - Features:
+      * Audio extraction and merging
+      * Video format conversion
+      * Multi-format support (MP4, AVI, MOV, MKV)
+
+================================
+SYSTEM DEPENDENCIES
+================================
+
+11. SYSTEM LIBRARIES
+    - libgl1 - OpenGL support
+    - libglib2.0-0 - GNOME libraries
+    - ffmpeg - Video/audio processing
+
+================================
+UTILITIES
+================================
+
+12. PROGRESS TRACKING
+    - tqdm 4.66.4
+    - Purpose: Progress bars for long-running operations
+
+13. SERIALIZATION
+    - Protobuf 4.25.3
+    - Purpose: Model serialization and data exchange
+
+================================
+DEEP LEARNING ARCHITECTURE
+================================
+
+NEURAL NETWORK TYPES USED:
+- Convolutional Neural Networks (CNNs)
+- ResNet-50 (Residual Networks)
+- Generative Adversarial Networks (GANs) - for face swapping
+- Facial Landmark Detection Networks
+- Multi-task Learning Networks
+
+TECHNIQUES:
+- Face Detection
+- Face Recognition & Embedding
+- Facial Landmark Localization
+- Generative Face Synthesis
+- Image-to-Image Translation
+
+================================
+DEPLOYMENT PLATFORM
+================================
+
+- Hugging Face Spaces
+- Docker-based containerization
+- Cloud hosting with automatic scaling
+- Git LFS for large model files
+
+================================
+DEVELOPMENT TOOLS
+================================
+
+- Git for version control
+- Git LFS for large binary files
+- Virtual Environment (venv) for dependency isolation
+
+================================
+KEY FEATURES IMPLEMENTATION
+================================
+
+IMAGE FACE SWAP:
+- Face detection using buffalo_l models
+- Feature extraction with ResNet-50
+- Face swapping with InSwapper model
+- Original resolution preservation
+
+VIDEO FACE SWAP:
+- Frame-by-frame processing
+- Real-time progress tracking
+- Audio preservation with FFmpeg
+- Batch face processing
+
+================================
+PERFORMANCE OPTIMIZATIONS
+================================
+
+- CPU-optimized inference with ONNX Runtime
+- Headless OpenCV for cloud environments
+- Efficient memory management
+- Temporary file handling for video processing
+
+================================
+END OF TECHNICAL STACK
+================================
