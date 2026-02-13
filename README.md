@@ -27,6 +27,67 @@ A powerful face swapping application that can swap faces in both **images** and 
 - Real-time progress tracking
 - Processes all faces in every frame
 
+## How to Run This Project
+
+### Prerequisites
+- Python 3.11 or higher
+- pip (Python package manager)
+- ffmpeg (for video processing)
+
+### Installation & Setup
+
+#### Step 1: Clone the Repository
+```bash
+git clone https://github.com/siva-mariappan/Face-Swap-Try-On.git
+cd Face-Swap-Try-On
+```
+
+#### Step 2: Create Virtual Environment
+```bash
+# On macOS/Linux:
+python3 -m venv venv
+source venv/bin/activate
+
+# On Windows:
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### Step 3: Install System Dependencies
+```bash
+# On macOS (using Homebrew):
+brew install ffmpeg
+
+# On Ubuntu/Debian:
+sudo apt-get update
+sudo apt-get install ffmpeg libgl1 libglib2.0-0
+
+# On Windows:
+# Download ffmpeg from https://ffmpeg.org/download.html and add to PATH
+```
+
+#### Step 4: Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+#### Step 5: Download the Face Swap Model
+The `inswapper_128.onnx` model file (529MB) should already be included in the repository. If not, you can download it from the InsightFace model zoo.
+
+#### Step 6: Run the Application
+```bash
+python app.py
+```
+
+The application will start and display a local URL (usually `http://127.0.0.1:7860`). Open this URL in your web browser.
+
+### Quick Start (One-Liner)
+```bash
+git clone https://github.com/siva-mariappan/Face-Swap-Try-On.git && cd Face-Swap-Try-On && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python app.py
+```
+
+---
+
 ## How to Use
 
 ### Image Face Swap
@@ -43,6 +104,15 @@ A powerful face swapping application that can swap faces in both **images** and 
 4. Click **"Swap Faces in Video"**
 5. Wait for processing (shows progress)
 6. Download your video with preserved audio!
+
+### Batch Processing
+For processing multiple images at once:
+```bash
+python batch_face_swap.py
+```
+- Place source face image in `swap person image/` folder
+- Place target images in `input person image/` folder
+- Results will be saved in `Output folder/`
 
 ## Tips for Best Results
 
@@ -72,9 +142,65 @@ A powerful face swapping application that can swap faces in both **images** and 
 
 This application uses the `inswapper_128.onnx` model for high-quality face swapping.
 
+## Troubleshooting
+
+### Common Issues
+
+**Issue: "No module named 'insightface'"**
+```bash
+pip install insightface==0.7.3
+```
+
+**Issue: "ONNX Runtime not found"**
+```bash
+pip install onnxruntime==1.18.0
+```
+
+**Issue: "cv2 not found"**
+```bash
+pip install opencv-python-headless==4.9.0.80
+```
+
+**Issue: Model file not found**
+- Ensure `inswapper_128.onnx` is in the project root directory
+- File size should be approximately 529MB
+
+**Issue: FFmpeg not found**
+- Install ffmpeg using your system package manager
+- Verify installation: `ffmpeg -version`
+
+**Issue: Slow processing**
+- Use GPU acceleration by installing `onnxruntime-gpu` instead of `onnxruntime`
+- Reduce image/video resolution before processing
+
+---
+
+## Project Structure
+```
+Face-Swap-Try-On/
+├── app.py                      # Main Gradio application
+├── batch_face_swap.py          # Batch processing script
+├── inswapper_128.onnx          # Face swap model (529MB)
+├── requirements.txt            # Python dependencies
+├── packages.txt                # System dependencies
+├── runtime.txt                 # Python version
+├── README.md                   # This file
+├── input person image/         # Sample input images
+├── swap person image/          # Source face images
+└── Output folder/              # Generated results
+```
+
+---
+
 ## Note
 
 ⚠️ This tool is for educational and creative purposes. Please use responsibly and respect privacy rights.
+
+---
+
+## License
+
+MIT License - Feel free to use and modify for your projects.
 
 ---
 
