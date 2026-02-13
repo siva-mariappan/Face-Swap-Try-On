@@ -105,14 +105,10 @@ ENV/
 # Project specific
 .gradio/
 flagged/
-input person image/
-swap person image/
-Output folder/
 *.mp4
 *.avi
 *.mov
 *.mkv
 
 # Git instructions file
-git.txt
 git.txt
