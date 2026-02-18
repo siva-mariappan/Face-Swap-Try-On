@@ -4,7 +4,6 @@ TECHNICAL STACK
 
 Project: Face-Swap-Try-On
 Type: Deep Learning Web Application
-License: MIT
 
 ================================
 CORE TECHNOLOGIES
@@ -98,17 +97,6 @@ SYSTEM DEPENDENCIES
     - libglib2.0-0 - GNOME libraries
     - ffmpeg - Video/audio processing
 
-================================
-UTILITIES
-================================
-
-12. PROGRESS TRACKING
-    - tqdm 4.66.4
-    - Purpose: Progress bars for long-running operations
-
-13. SERIALIZATION
-    - Protobuf 4.25.3
-    - Purpose: Model serialization and data exchange
 
 ================================
 DEEP LEARNING ARCHITECTURE

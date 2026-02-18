@@ -27,6 +27,23 @@ A powerful face swapping application that can swap faces in both **images** and 
 - Real-time progress tracking
 - Processes all faces in every frame
 
+## Examples
+
+### Input Images
+**Source Face (Swap Person):**
+
+![Source Face](swap%20person%20image/swapinput01.png)
+
+**Target Images (Input Person):**
+
+![Target Image 1](input%20person%20image/Inputperson01.png)
+![Target Image 2](input%20person%20image/input02.jpg)
+
+### Output Results
+
+![Output Result 1](Output%20folder/Output01.png)
+![Output Result 2](Output%20folder/Output02.jpg)
+
 ## How to Run This Project
 
 ### Prerequisites
@@ -201,13 +218,5 @@ Face-Swap-Try-On/
 ## Note
 
 ⚠️ This tool is for educational and creative purposes. Please use responsibly and respect privacy rights.
-
----
-
-## License
-
-MIT License - Feel free to use and modify for your projects.
-
----
 
 Built with ❤️ using Gradio and InsightFace
